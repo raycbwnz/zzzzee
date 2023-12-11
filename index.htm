@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>客服聊天機器人</title>
+</head>
+<body>
+    <h1>客服聊天機器人</h1>
+    <input type="text" id="query" placeholder="Enter Chinese word">
+    <button onclick="search()">Search</button>
+    <p id="result"></p>
+
+    <script>
+        function search() {
+            var query = document.getElementById('query').value;
+            var url = 'https://script.google.com/macros/s/AKfycbzJqULoaNU2eu1kkYR-c183M3JDlMdFfiul_jLXCD-ZpMs-H-KsDPYhJ0zyOE3hnaGNLw/exec?q=' + encodeURIComponent(query);
+
+            fetch(url)
+                .then(response => response.text())
+                .then(text => document.getElementById('result').innerText = text)
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
