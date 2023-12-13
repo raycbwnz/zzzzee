@@ -1,24 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>客服聊天機器人</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡資訊</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: url('https://i.imgur.com/H7bVzKY.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        h1 {
+            color: #333;
+	    font-size: 60px;
+        }
+        form {
+            max-width: 400px;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .social-buttons {
+            margin-top: 20px;
+        }
+        .social-buttons a {
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .social-buttons img {
+            max-width: 1000px; /* 設定最大寬度 */
+            max-height: 1000px; /* 設定最大高度 */
+            width: 300px; /* 新增縮小的寬度 */
+            height: 300px; /* 新增縮小的高度 */
+        }
+    </style>
 </head>
 <body>
-    <h1>客服聊天機器人</h1>
-    <input type="text" id="query" placeholder="Enter Chinese word">
-    <button onclick="search()">Search</button>
-    <p id="result"></p>
 
-    <script>
-        function search() {
-            var query = document.getElementById('query').value;
-            var url = 'https://script.google.com/macros/s/AKfycbzJqULoaNU2eu1kkYR-c183M3JDlMdFfiul_jLXCD-ZpMs-H-KsDPYhJ0zyOE3hnaGNLw/exec?q=' + encodeURIComponent(query);
+    <h1>聯絡我們</h1>
 
-            fetch(url)
-                .then(response => response.text())
-                .then(text => document.getElementById('result').innerText = text)
-                .catch(error => console.error('Error:', error));
-        }
-    </script>
+    <div class="social-buttons">
+        <a href="https://line.me/ti/p/6wdG-mkn3h" target="_blank">
+            <img src="https://i.imgur.com/oS2VoVa.jpg" alt="Line">
+        </a>
+        <a href="https://instagram.com/brokenheart.dog?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank">
+            <img src="https://i.imgur.com/PTPRUyG.jpg" alt="Instagram">
+        </a>
+    </div>
+
+    <h1>地址:36003苗栗縣苗栗市聯大1號</h1>
+    <h1>電話:037-381000</h1>
 </body>
 </html>
